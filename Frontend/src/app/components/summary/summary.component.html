@@ -4,19 +4,19 @@
     <thead class="table-light">
       <tr>
         <th>Sampling Time</th>
-        <th>Properties</th>
+        <th>Project Name</th>
+        <th>Construction Count</th>
+        <th>Is Construction Completed</th>
+        <th>Length of the road</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of datas">
         <td>{{ item.SamplingTime }}</td>
-        <td>
-          <ul class="mb-0">
-            <li *ngFor="let prop of item.Properties">
-              {{ prop.Label }}: {{ prop.Value }}
-            </li>
-          </ul>
-        </td>
+        <td>{{ getPropertyValue(item, 'Project Name') }}</td>
+        <td>{{ getPropertyValue(item, 'Construction Count') }}</td>
+        <td>{{ getPropertyValue(item, 'Is Construction Completed') }}</td>
+        <td>{{ getPropertyValue(item, 'Length of the road') }}</td>
       </tr>
     </tbody>
   </table>
