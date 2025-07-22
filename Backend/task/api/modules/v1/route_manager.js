@@ -6,8 +6,6 @@ const user_routes = require("./routes/user_routes");
 
 router.use("/", middleware.extractHeaderLanguage);
 
-// router.use("/", middleware.validateHeaderApiKey);
-
 router.use("/user", user_routes);
 
 module.exports = router;

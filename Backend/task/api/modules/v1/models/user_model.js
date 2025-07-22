@@ -47,16 +47,16 @@ const user_model = {
             }
 
             if (updatedCount === 0) {
-                return await common.sendResponse(res, Codes.NOT_FOUND, 'Entry not found', null);
+                return await common.sendResponse(res, Codes.NOT_FOUND, lang[req.language]['rest_keywords_not_found'], null);
             }
 
             // Write back the updated data
             fs.writeFileSync(dataPath, JSON.stringify(parsedData, null, 2), 'utf8');
 
-            return await common.sendResponse(res, Codes.SUCCESS, 'Data updated successfully', datasArray);
+            return await common.sendResponse(res, Codes.SUCCESS, lang[req.language]['rest_keywords_data_updated'], datasArray);
         } catch (error) {
             console.error("Error in updateData:", error);
-            return await common.sendResponse(res, Codes.INTERNAL_SERVER_ERROR, 'Something went wrong', null);
+            return await common.sendResponse(res, Codes.INTERNAL_ERROR, lang[req.language]['rest_keywords_user_something_wrong'], null);
         }
     }
 

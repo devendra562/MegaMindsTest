@@ -12,33 +12,6 @@ const headerValidator = {
     } catch (error) {
       console.log(error);
     }
-  },
-
-  //Function to validate API key of header (Note : Header keys are encrypted)
-  validateHeaderApiKey: async (req, res, next) => {
-    const bypassHeaderKey = [];
-    
-    try {
-      const apiKey = req.headers['api-key'] ? common.decryptPlain(req.headers["api-key"]) : "";
-  
-      const pathData = req.path.split("/");
-      if (!bypassHeaderKey.includes(pathData[2])) { 
-        if (apiKey) { 
-          if (apiKey === process.env.API_KEY) {
-            return next();  // Use return here for consistency
-          } else {
-            return await common.sendResponse(res, Codes.UNAUTHORIZED, lang[req.language]["rest_keywords_invalid_api_key"], null);
-          }
-        } else {
-          return await common.sendResponse(res, Codes.UNAUTHORIZED, lang[req.language]["rest_keywords_invalid_api_key"], null);
-        }
-      } else {
-        return next(); // Continue without API key validation
-      }
-    } catch (error) {
-      // logger.error(error);
-      return await common.sendResponse(res, Codes.INTERNAL_ERROR, "An error occurred", null);
-    }
   }
 };
 
