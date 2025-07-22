@@ -1,0 +1,103 @@
+{
+  "Id": 1,
+  "Name": "New Observation",
+  "Datas": [
+    {
+      "SamplingTime": "2021-04-21T11:00:05.5051255+05:30",
+      "Properties": [
+        {
+          "Value": "Road Construction 1",
+          "Label": "Project Name"
+        },
+        {
+          "Value": 40,
+          "Label": "Construction Count"
+        },
+        {
+          "Value": false,
+          "Label": "Is Construction Completed"
+        },
+        {
+          "Value": 5.6,
+          "Label": "Length of the road"
+        }
+      ]
+    },
+    {
+      "SamplingTime": "2021-04-22T11:00:05.5081232+05:30",
+      "Properties": [
+        {
+          "Value": "Road Construction 2",
+          "Label": "Project Name"
+        },
+        {
+          "Value": true,
+          "Label": "Is Construction Completed"
+        },
+        {
+          "Value": 3.2,
+          "Label": "Length of the road"
+        }
+      ]
+    },
+    {
+      "SamplingTime": "2021-04-23T11:00:05.5081232+05:30",
+      "Properties": [
+        {
+          "Value": "Road Construction 3",
+          "Label": "Project Name"
+        },
+        {
+          "Value": false,
+          "Label": "Is Construction Completed"
+        },
+        {
+          "Value": 4.1,
+          "Label": "Length of the road"
+        }
+      ]
+    },
+    {
+      "SamplingTime": "2021-04-24T09:15:00.0000000+05:30",
+      "Properties": [
+        {
+          "Value": "Bridge Maintenance",
+          "Label": "Project Name"
+        },
+        {
+          "Value": 12,
+          "Label": "Workers On Site"
+        },
+        {
+          "Value": true,
+          "Label": "Safety Check Passed"
+        },
+        {
+          "Value": 2.3,
+          "Label": "Bridge Span (km)"
+        }
+      ]
+    },
+    {
+      "SamplingTime": "2021-04-25T15:30:00.0000000+05:30",
+      "Properties": [
+        {
+          "Value": "Tunnel Digging",
+          "Label": "Project Name"
+        },
+        {
+          "Value": false,
+          "Label": "Is Tunnel Opened"
+        },
+        {
+          "Value": 8,
+          "Label": "Digging Machines Used"
+        },
+        {
+          "Value": 1.2,
+          "Label": "Tunnel Depth (km)"
+        }
+      ]
+    }
+  ]
+}

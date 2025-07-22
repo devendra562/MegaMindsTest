@@ -1,0 +1,23 @@
+<div class="container">
+  <h4 class="mb-3">Summary View</h4>
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Sampling Time</th>
+        <th>Properties</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datas">
+        <td>{{ item.SamplingTime }}</td>
+        <td>
+          <ul class="mb-0">
+            <li *ngFor="let prop of item.Properties">
+              {{ prop.Label }}: {{ prop.Value }}
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

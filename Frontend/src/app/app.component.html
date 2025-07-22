@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="selectedTab === 'summary'" (click)="selectedTab = 'summary'">Summary</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="selectedTab === 'detail'" (click)="selectedTab = 'detail'">Detailed</a>
+  </li>
+</ul>
+
+<div class="tab-content mt-3">
+  <div *ngIf="selectedTab === 'summary'">
+    <app-summary></app-summary>
+  </div>
+  <div *ngIf="selectedTab === 'detail'">
+    <app-detailed></app-detailed>
+  </div>
+</div>
